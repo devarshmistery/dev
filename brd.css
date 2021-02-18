@@ -1,0 +1,1431 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial;
+    /* padding: 0; */
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+    url(image/bg.jpg) ;
+    background-size: cover;
+}
+
+h1{
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500,0 0 60px #ff0000,0 0 10px #ff8d00;
+}
+.container{
+    width: 30%;
+    height: 30%;
+    /* background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+    url(bg.jpg) center no-repeat; */
+    background-size: cover;
+    display:inline-block;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}      
+
+.card{
+    width: 360px;
+    height: 560px;
+    /* background-color: #eee; */
+    position: absolute;
+    perspective: 1000px;
+}
+.sides{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position-x:0 ;
+   /* background-color: #eee;  */
+    background: linear-gradient(rgba(0,0,0,0.5),rgb(0,0,0,0.7)),
+    url(image/card-bg.jpg) center no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    transform: rotateY(0deg);
+    transform-origin: left;
+   transition: transform 1s;
+}
+.right-side{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background: position x -180px; ;
+    background: linear-gradient(rgba(0,0,0,0.5),rgb(0,0,0,0.7)),
+    url(image/card-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    width: 50%;
+    height: 100%;
+    transform: rotateY(0deg);
+    transform-origin: right;
+   transition: transform 1s;
+}
+.back-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 40px 40px 80px #000;
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+    url(image/abc.jpg) center no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+
+.card:hover .left-side{
+    transform: rotateY(-360deg);
+}
+.card:hover .right-side{
+    transform: rotateY(360deg);
+}
+.card:hover .back-side{
+    transform:translateZ(0);
+    z-index: 1;
+    box-shadow: 50px 50px 100px #000;
+
+}
+
+.name{
+    color: #fff;
+    font-size: 35px;
+    margin: 20px 5px;
+}
+.profession{
+    color: #eee;
+    font-size: 25px;
+    margin: 20px 5px;
+
+}
+
+.left-side .name,
+.left-side .profession{
+    text-align: right;
+}
+
+.biography{
+    color: #fff;
+    font-size: 22px;
+    background-color: rgb(0,0,0,0.4);
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.back-side1{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 40px 40px 80px #000;
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+    url(image/2.jpg) center no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side1{
+    transform:translateZ(0);
+    z-index: 1;
+    box-shadow: 50px 50px 100px #000;
+
+}
+
+.back-side2{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 40px 40px 80px #000;
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+    url(image/3.jpg) center no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: translateZ(-300px);
+    transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side2{
+    transform:translateZ(0);
+    z-index: 1;
+    box-shadow: 50px 50px 100px #000;
+}
+.back-side3{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/4.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side3{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side4{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/6.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side4{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side5{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/5.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side5{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side6{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/7.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side6{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side7{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/8.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side7{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side8{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/9.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side8{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side9{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/10.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side9{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side10{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/11.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side10{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side11{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/12.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side11{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side12{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/13.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side12{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side13{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/14.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side13{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side14{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/15.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side14{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side15{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/16.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side15{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side16{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/17.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side16{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side17{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/18.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side17{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side18{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/19.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side18{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side19{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/20.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side19{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side20{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/21.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side20{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side21{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/22.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side21{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side22{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/23.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side22{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side23{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/24.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side23{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side24{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/25.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side24{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side25{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/26.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side25{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side26{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/27.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side26{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side27{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/28.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side27{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side28{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/29.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side28{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+
+.back-side29{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/30.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side29{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side30{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/31.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side30{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side31{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/32.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side31{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side32{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/33.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side32{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side33{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/34.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side33{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side34{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/35.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side34{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side35{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/36.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side35{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side36{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/37.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side36{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side37{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/38.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side37{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side38{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/39.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side38{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side39{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/40.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side39{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side40{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/41.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side40{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side41{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/42.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side41{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side42{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/43.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side42{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side43{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/44.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side43{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side44{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/45.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side44{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side45{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/46.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side45{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side46{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/47.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side46{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side47{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/48.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side47{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side48{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/49.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side48{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side49{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/50.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side49{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+.back-side50{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 40px 40px 80px #000;
+  background: linear-gradient(rgba(0,0,0,0.6),rgb(0,0,0,0.3)),
+  url(image/51.jpg) center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  
+  transform: translateZ(-300px);
+  transition: z-index 0.4s step-end, transform 1s, box-shadow ;
+}
+.card:hover .back-side50{
+  transform:translateZ(0);
+  z-index: 1;
+  box-shadow: 50px 50px 100px #000;
+}
+@import url(//fonts.googleapis.com/css?family=Vibur);
+html,body{
+  height:100%
+}
+.logo {
+  text-align: center;
+  width: 65%;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 30;
+  left: 0;
+  right: 0;
+  bottom: 50;
+   user-select: none;
+   
+}
+
+.logo b{
+  font: 400 12vh "Tempus Sans ITC";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.logo b span{
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+
+/* follow me @nodws */
+#btn-twtr{
+  clear:both;
+  color:#fff;
+  border:2px solid;
+  border-radius:3px;
+  text-align:center;
+  text-decoration:none;
+  display:block;
+  font-family:sans-serif;
+  font-size:14px;
+  width:13em;
+  padding:5px 10px;
+  font-weight:600;
+  position:absolute;
+  bottom:20px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  background:rgba(0,0,0,0.2);
+  box-shadow:0 0 0px 3px rgba(0,0,0,0.2);
+  opacity:0.4
+}
+#btn-twtr:hover
+{
+    color:#fff;opacity:1
+}
+
+p{
+  font-size: 50px;
+  line-height: calc(20px +20vh);
+  text-shadow: 0 0 5px #ffa500, 0 0 10px #ffa500, 0 0 15px #ffa500, 0 0 35px #ffa500,0 0 55px #ff0000,0 0 5px #ff8d00;
+  color: #000;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  
+   /* animation: blink 3s infinite;  */
+}
+
+.box{
+  position: absolute;
+  top: 250;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+}
+.box span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.box span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.box span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate{
+  0%{
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: rotate(45deg) translate(20px,20px);
+
+  }
+}
